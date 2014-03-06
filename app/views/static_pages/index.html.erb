@@ -1,0 +1,58 @@
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>Swipe Task</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+
+	<div id="left-view">
+		<ul id="task_ul">
+		<% @tasks.each do |task| %>
+			<li class="task_ul_li">
+				<div id="task-info"> 
+					<span id="task-name"><%= task.name[0..25]+"..." %></span>
+					<span id="task-edit">
+						<label for="completed-<%=task.id%>">completed:</label>
+						<%= check_box_tag 'Completed', task.id , task.completed, :class => "task-cbox" %>
+						<br>
+						Tweet:
+						
+						<%= check_box_tag 'Tweeted', task.id, false, :class => "task-tweet" %>
+						
+
+
+
+						<br>
+						Delete: 
+						<span id="delete"><%= link_to '---', task, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+
+					</span>
+				</div>
+		        
+		    </li>
+		<% end %>
+		</ul>
+
+	</div>
+
+	<%=%>
+
+
+	<div id="right-create">
+		<div id="logo">
+			swipe<span id="thick-logo">task</span>
+		</div>
+		<br>
+		<%= render 'tasks/form' %><br>
+		<div id="sub-text"> Click Task to Edit </div>
+	</div>
+</body>
+
+</html>
+
+

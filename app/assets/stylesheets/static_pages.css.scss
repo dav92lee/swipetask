@@ -1,0 +1,146 @@
+/*!
+ * stroll.js 1.2 - CSS scroll effects
+ * http://lab.hakim.se/scroll-effects
+ * MIT licensed
+ * 
+ * Copyright (C) 2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+
+
+*{
+	font-family: 'helvetica';
+}
+
+body{
+	margin-top: -1px;
+	margin-left: -1px;
+	background-color: #212121;
+	
+}
+
+
+#left-view{
+	float:left;
+	position:absolute;
+	width:50%;
+	height: auto;
+
+	background-color: #242424;
+	background-size: cover;
+	color: white;
+	
+	text-transform: capitalize;
+	font-weight: 300;
+
+	#task_ul{
+		list-style-type: none;
+		padding:0;
+		margin:0;
+		.active{
+			background-color:#727272;
+		}
+		.task_ul_li{
+			height: 140px;
+			width: 100%;
+			border-top: 0px;
+			border-bottom: 1px;
+			border-left:0px;
+			border-right:0px;
+			border: solid 1px;
+			border-color: white;
+
+			#task-info{
+
+				padding-top: 60px;
+				padding-left: 10%;
+				#task-name{
+					font-size: 25px;
+				}
+			}
+			#task-edit{
+				display: none;
+				float:right;
+				margin-top:-20px;
+				margin-right: 5%;
+				text-align: right;
+				font-size: 10px;
+				color: #d6d6d6;
+				line-height: 8px;
+				.task-cbox{
+					
+				}
+
+				.task-tweet{
+					margin-bottom: 7px;
+				}
+
+				#delete{
+					margin-right: 4px;
+					margin-left: 3px;
+					display: inline-block;
+					background-color:#ececec;
+					width: 11px;
+					height: 10px;
+					border: solid 1px;
+					border-color: #444444;
+					border-radius: 3px;
+
+				}
+				#delete >a{
+					color:#ececec;
+					text-decoration: none;
+					padding-right:2px;
+				}
+				#delete >a:hover{
+					color:red;
+					height: 10px;
+					background-color: red;
+					opacity: .5;
+					text-decoration: none;
+					padding-right:2px;
+				}
+			}
+			
+		}
+
+	}
+}
+
+.task_ul_li:hover{
+	background-color:black;
+}
+
+#right-create{
+	float:right;
+	position: fixed;
+	display: block;
+	margin-left:50%;
+	width: 50%;
+	height:100%;
+	text-align:center;
+	background-color: white;
+	color: #656565;
+
+	#logo{
+		margin-top: 48%;
+
+		font-weight: 100;
+		font-size: 30px;
+
+		letter-spacing: 4px;
+
+		#thick-logo{
+			font-weight: 900;
+		}
+	}
+	#sub-text{
+		margin-top:-20px;
+		font-size: 10px;
+		text-transform: uppercase;
+		color: #a7a7a7;
+	}
+
+}
+
